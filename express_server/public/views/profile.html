@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h2>User Profile</h2>
+
+        <!-- Display user information here -->
+        <div id="profileInfo"></div>
+
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        // Retrieve user information from localStorage
+        const userId = localStorage.getItem("currentUserId");
+        const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Find the user with the current user ID
+        const currentUser = existingUsers.find(user => user.userId === userId);
+
+        if (currentUser) {
+            // Display user information on the profile page
+            const profileInfoElement = document.getElementById("profileInfo");
+
+            const userInfoHTML = `
+                <p><strong>User ID:</strong> ${currentUser.userId}</p>
+                <p><strong>Name:</strong> ${currentUser.name}</p>
+                <p><strong>Surname:</strong> ${currentUser.surname}</p>
+                <p><strong>Age:</strong> ${currentUser.age}</p>
+                <p><strong>Gender:</strong> ${currentUser.gender}</p>
+                <p><strong>Email:</strong> ${currentUser.email}</p>
+            `;
+
+            profileInfoElement.innerHTML = userInfoHTML;
+        } else {
+            console.error("User not found");
+        }
+    </script>
+</body>
+</html>
+
