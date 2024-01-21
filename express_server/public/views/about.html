@@ -13,14 +13,15 @@
     </head>
     <body>
         <header class="header">
-            <a href="about.html" class="logo">boygenius</a>
+            <a href="home.html" class="logo"><i class='bx bx-body'></i>boygenius</a>
             <!-- Nav-links -->
             <nav class="navbar">
-                <a href="index.html" style="--1:1" class="active">HOME</a>
-                <a href="about.html" style="--1:2">ABOUT</a>
-                <a href="contact.html" style="--1:6">CONTACT</a>
-                <a href="profile.html" style="--1:7">PROFILE</a>
-                <button class="btnLogin-popup">Login</button>
+                <a href="home.html" style="--1:1" class="active">Home</a>
+                <a href="about.html" style="--1:2">About</a>
+                <a href="contact.html" style="--1:6">Contact</a>
+                <a href="profile.html" style="--1:7">Profile</a>
+                <button class="btnLogin-popup" onclick="logout()">Log out</button>
+
             </nav>
         </header>
         
@@ -29,16 +30,18 @@
             <div class="overlay"></div>
             <div class="content">
                 <h1>Welcome to Boygenius</h1>
-                <p>Rocking your world with raw energy and killer tunes!</p>
+                <p>A powerhouse indie supergroup crafting soul-stirring music that transcends individual brilliance.</p>
     
             </div>
         </section>
         <section class="paragraph">
             <div class="content">
-                <p>BadAss Band is not your average band. We're here to break the rules and redefine the music scene. Our explosive performances and unique sound will leave you craving for more. Get ready to dive into a world of powerful lyrics, electrifying melodies, and a musical experience like no other.</p>
+                <p>Boygenius is a captivating indie supergroup formed by the dynamic trio of Julien Baker, Phoebe Bridgers, and Lucy Dacus. United by their individual prowess in the indie music scene, these talented artists bring forth a spellbinding fusion of evocative lyricism and soulful melodies. The self-titled EP, "boygenius," released in 2018, stands as a testament to their collective brilliance, offering listeners an emotional journey through raw, introspective narratives and intricate musical arrangements.</p>
                 <p>Boygenius consists of three members:</p>
             </div>
         </section>
+
+        <!--Members introductions-->
 
         <section class="about">
            <div class="main">
@@ -46,8 +49,8 @@
             <div class="about-text">
                 
                 <h5>Julien <span>Baker</span></h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button>Learn More</button>
+                <p>Julien Baker, the acclaimed singer-songwriter hailing from Memphis, Tennessee, is a force to be reckoned with in the indie music landscape. Known for her poignant lyricism and hauntingly beautiful vocals, Baker crafts emotionally charged songs that explore themes of love, faith, and self-discovery. With a distinct ability to bare her soul through music, Julien Baker has garnered widespread acclaim for her solo work and collaborative projects, leaving an indelible mark on the contemporary indie scene.</p>
+                <button id="learnMoreButton">Learn More</button>
             </div>
            </div> 
            <div class="main">
@@ -55,8 +58,8 @@
             <div class="about-text">
               
                 <h5>Phoebe <span>Bridgers</span></h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button>Learn More</button>
+                <p>Phoebe Bridgers, a singer-songwriter and guitarist hailing from Los Angeles, has garnered widespread acclaim for her introspective and hauntingly beautiful music. With her ethereal voice and poignant lyrics, Bridgers navigates themes of vulnerability, love, and self-discovery, creating a sonic landscape that resonates deeply with listeners. Her impressive talent has solidified her place in the indie folk and rock scenes, making her a captivating and influential figure in contemporary music.</p>
+                <button id="learnMoreButton2">Learn More</button>
             </div>
            </div> 
            <div class="main">
@@ -64,8 +67,9 @@
             <div class="about-text">
                 
                 <h5>Lucy <span>Dacus</span></h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button>Learn More</button>
+                <p>
+                    Lucy Dacus, a singer-songwriter hailing from Richmond, Virginia, has emerged as a notable force in the indie music scene. Her music, characterized by a seamless fusion of indie rock and folk elements, reflects a poignant exploration of personal experiences and universal themes. Dacus' rich, soulful voice and poignant lyricism have garnered her acclaim, establishing her as a compelling and introspective artist who continues to make a significant impact on the contemporary music landscape.</p>
+                <button id="learnMoreButton3">Learn More</button>
             </div>
            </div> 
         </section>
@@ -83,7 +87,22 @@
     
 
 <script>
+        function logout() {
+        
+        window.location.href = "index.html";
+        }
+
+        document.getElementById('learnMoreButton').addEventListener('click', function() {
+        window.location.href = 'https://julienbaker.com/';
+    });
+    document.getElementById('learnMoreButton2').addEventListener('click', function() {
+        window.location.href = 'https://phoebefuckingbridgers.com/';
+    });
+    document.getElementById('learnMoreButton3').addEventListener('click', function() {
+        window.location.href = 'https://lucydac.us/';
+    });
         </script>
+
 
         
 
