@@ -3,10 +3,10 @@ const path = require('path');
 const app = express();
 const port = 5500;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/views/index.html/');
+  res.sendFile(__dirname + '/public/views/index.html');
 });
 
 app.get('/about', (req, res) => {
@@ -20,7 +20,7 @@ app.get('/contact', (req, res) => {
 app.get('/profile', (req, res) => {
   res.sendFile(__dirname + '/public/views/profile.html');
 });
-app.get('/profile', (req, res) => {
+app.get('/home', (req, res) => {
   res.sendFile(__dirname + '/public/views/home.html');
 });
 
